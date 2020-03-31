@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">LiSt</string>
+
+    <string-array name="list">
+        <item>タイトル</item>
+        <item>著者</item>
+        <item>出版</item>
+    </string-array>
+
+    <string-array name="sereas">
+        <item>シリーズサンプル１</item>
+        <item>シリーズサンプル２</item>
+        <item>シリーズサンプル３</item>
+    </string-array>
+
+    <string-array name="tag">
+        <item>タグサンプル１</item>
+        <item>タグサンプル２</item>
+        <item>タグサンプル３</item>
+    </string-array>
+</resources>

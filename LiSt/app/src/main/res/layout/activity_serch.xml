@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jp.ac.hal.nagoya.nhs70244.list.SerchActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp"
+
+    >
+
+    <TextView
+        android:id="@+id/txtvserch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="書籍の検索"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickSerch"
+        android:text="検索"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="49dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="43dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/txtvserchlevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="検索項目"
+                tools:layout_editor_absoluteY="64dp"
+                tools:layout_editor_absoluteX="24dp" />
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="24dp"
+                tools:layout_editor_absoluteY="90dp">
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="タイトル" />
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="著者" />
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="出版" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txtvserchtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="検索テキスト"
+                tools:layout_editor_absoluteY="142dp"
+                tools:layout_editor_absoluteX="24dp" />
+            <EditText
+                android:id="@+id/edserch"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="text"
+                tools:layout_editor_absoluteY="176dp"
+                tools:layout_editor_absoluteX="24dp" />
+
+            <TextView
+                android:id="@+id/txtvserchtag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="タグ絞り込み"
+                tools:layout_editor_absoluteY="327dp"
+                tools:layout_editor_absoluteX="25dp" />
+            <Spinner
+                android:id="@+id/spiSerchSere"
+                android:layout_width="335dp"
+                android:layout_height="30dp"
+                tools:layout_editor_absoluteY="280dp"
+                tools:layout_editor_absoluteX="25dp" />
+
+            <TextView
+                android:id="@+id/txtvserchseries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="シリーズ絞り込み"
+                tools:layout_editor_absoluteY="250dp"
+                tools:layout_editor_absoluteX="28dp" />
+            <Spinner
+                android:id="@+id/spiSerchtag"
+                android:layout_width="335dp"
+                android:layout_height="30dp"
+                tools:layout_editor_absoluteY="358dp"
+                tools:layout_editor_absoluteX="25dp" />
+
+            <TextView
+                android:id="@+id/txtsortlevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ソート" />
+            <RadioGroup
+                android:id="@+id/radioGroupsort"
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="24dp"
+                tools:layout_editor_absoluteY="90dp">
+                <RadioButton
+                    android:id="@+id/radioButton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="タイトル" />
+                <RadioButton
+                    android:id="@+id/radioButton6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="著者" />
+                <RadioButton
+                    android:id="@+id/radioButton7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="登録順" />
+            </RadioGroup>
+            <RadioGroup
+                android:id="@+id/radioGroupsort2"
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="24dp"
+                tools:layout_editor_absoluteY="90dp">
+                <RadioButton
+                    android:id="@+id/radioButton8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="昇順" />
+                <RadioButton
+                    android:id="@+id/radioButton9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="降順" />
+            </RadioGroup>
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

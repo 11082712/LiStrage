@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jp.ac.hal.nagoya.nhs70244.list.EditActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp"
+    android:background="@drawable/woodnoat">
+
+    <Button
+        android:id="@+id/btnFinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:onClick="btnFinishClick"
+        android:text="キャンセル"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="33dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="40dp" />
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="58dp"
+        android:onClick="btnEditClick"
+        android:text="確定"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="33dp"
+        android:layout_marginRight="58dp" />
+
+    <EditText
+        android:id="@+id/edTitle"
+        android:layout_width="195dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="29dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="78dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="29dp" />
+
+    <EditText
+        android:id="@+id/edAut"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/edTitle"
+        android:layout_marginTop="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/edTitle"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/edTitle" />
+
+    <EditText
+        android:id="@+id/edPubli"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/edAut"
+        android:layout_marginTop="19dp"
+        app:layout_constraintTop_toBottomOf="@+id/edAut"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/edAut" />
+
+    <Spinner
+        android:id="@+id/spSer"
+        android:layout_width="240dp"
+        android:layout_height="24dp"
+        android:entries="@array/sereas"
+        android:layout_marginStart="29dp"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="51dp"
+        app:layout_constraintTop_toBottomOf="@+id/edPubli"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="29dp" />
+
+    <Spinner
+        android:id="@+id/spTag"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:entries="@array/tag"
+        android:layout_marginStart="29dp"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="41dp"
+        app:layout_constraintTop_toBottomOf="@+id/spSer"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="29dp" />
+
+    <ImageButton
+        android:id="@+id/imgeditimage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        android:layout_marginEnd="22dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/edPubli"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintTop_toTopOf="@+id/edTitle"
+        app:layout_constraintLeft_toRightOf="@+id/edTitle"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="22dp" />
+
+</android.support.constraint.ConstraintLayout>
